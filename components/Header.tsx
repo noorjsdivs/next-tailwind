@@ -18,8 +18,9 @@ const Header = () => {
     <div className="w-full h-20 border-b-[1px] border-gra-500 px-2 bg-white">
       <div className="h-full max-w-screen-2xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link href={"/"}>
+        <Link href={"/"} className="relative group overflow-hidden">
           <p className="text-2xl font-bold">Creative Studio</p>
+          <span className="absolute bottom-0 w-full h-[2px] bg-primeColor inline-block -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-700"></span>
         </Link>
         {showMenu && (
           <div className="w-full h-screen fixed lg:hidden top-0 left-0 bg-darkGreen bg-opacity-90 z-50">
@@ -27,7 +28,7 @@ const Header = () => {
               initial={{ x: -40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.2 }}
-              className="w-[70%] h-full bg-darkGreen p-4 relative"
+              className="w-[70%] h-full bg-darkGreen p-4 relative flex flex-col gap-4"
             >
               <span
                 onClick={() => setShowMenu(false)}
@@ -35,7 +36,9 @@ const Header = () => {
               >
                 <IoCloseSharp />
               </span>
-
+              <Link href={"/"} onClick={() => setShowMenu(false)}>
+                <p className="text-2xl font-bold text-white">Creative Studio</p>
+              </Link>
               <ul className="flex flex-col text-gray-300 gap-3 uppercase text-sm font-semibold ">
                 {headerListItem.map((item) => (
                   <Link key={item._id} href={item.link}>
