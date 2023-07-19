@@ -1,12 +1,12 @@
 import Container from "@/components/Container";
 import React from "react";
 
-const Services = () => {
+const AboutUs = () => {
   return (
     <Container>
-      <p>Hello</p>
+      <p>About us</p>
     </Container>
   );
 };
 
-export default Services;
+export default AboutUs;

@@ -18,7 +18,9 @@ const Header = () => {
     <div className="w-full h-20 border-b-[1px] border-gra-500 px-2 bg-white">
       <div className="h-full max-w-screen-2xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <p className="text-2xl font-bold">Creative Studio</p>
+        <Link href={"/"}>
+          <p className="text-2xl font-bold">Creative Studio</p>
+        </Link>
         {showMenu && (
           <div className="w-full h-screen fixed lg:hidden top-0 left-0 bg-darkGreen bg-opacity-90 z-50">
             <motion.div

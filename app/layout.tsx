@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Creative Studio",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
